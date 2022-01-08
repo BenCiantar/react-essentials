@@ -2,9 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-//First argument it takes is element to create
-//Second argument - where to insert it
+// ReactDOM.render(
+//   React.createElement(
+//     "h1",  //Element to create
+//     { style: { color: "blue" } }, //Properties to assign it
+//     "I'm a heading!"), //Content to insert
+//   document.getElementById("root") //Where to insert the element
+// );
+
 ReactDOM.render(
-  React.createElement("h1", { style: { color: "blue" } }, "I'm a heading!"),
+  React.createElement(
+    "ul",
+    null,
+    React.createElement("li", null, "Monday"),
+    React.createElement("li", null, "Tuesday"),
+    React.createElement("li", null, "Wednesday"),
+    React.createElement("li", null, "Thursday"),
+    React.createElement("li", null, "Friday")
+  ),
   document.getElementById("root")
 );
