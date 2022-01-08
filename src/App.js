@@ -11,6 +11,9 @@ function Main(props) {
   return (
     <section>
       <p>We sell {props.adjective} things. Very weird things.</p>
+      <ul style={{ listStyleType: "none" }}>
+        {props.items.map((item) => <li>{item}</li>)}
+      </ul>
     </section>
   );
 }
@@ -22,12 +25,18 @@ function Footer(props) {
   );
 }
 
+const items = [
+  "Fishing rod", 
+  "Cheese sandwich", 
+  "Pokemon cards"
+];
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Header name="Ben" />
-        <Main adjective="stanky" />
+        <Main adjective="stanky" items={items}/>
         <Footer year={new Date().getFullYear()} />
       </header>
     </div>
