@@ -62,12 +62,12 @@ import App from "./App";
 // );
 
 //Array destructuring
-const [mostImportantItem, , thirdItem] = [
-  "Mask",
-  "Duct tape",
-  "Gloves"
-]
-console.log(thirdItem);
+// const [mostImportantItem, , thirdItem] = [
+//   "Mask",
+//   "Duct tape",
+//   "Gloves"
+// ]
+// console.log(thirdItem);
 
 //Render whatever is returned by the imported App function
 ReactDOM.render(

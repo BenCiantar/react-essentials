@@ -56,10 +56,27 @@ function RegularComponent() {
   return <h1>Info for regular plebs</h1>
 }
 
-function App(props) {
+// function App(props) {
+//   return (
+//     <>
+//       {props.authorized ? 
+//         (<SecretComponent />
+//       ) : (
+//         <RegularComponent />
+//       )}
+//     </>
+//   );
+// }
+
+//Using object destructuring to clear up syntax
+function App(authorized) {
   return (
     <>
-      {props.authorized ? <SecretComponent /> : <RegularComponent />}
+      {authorized ? 
+        (<SecretComponent />
+      ) : (
+        <RegularComponent />
+      )}
     </>
   );
 }
