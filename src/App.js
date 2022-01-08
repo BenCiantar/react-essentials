@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./App.css";
 // import spiderman from "../src/spiderman.png"
 
@@ -81,10 +82,24 @@ import "./App.css";
 //   );
 // }
 
+//useState returns an array - firs item is the current state, 
+//second is a function that update state
+//Anon function bound to button updates state with defined function
 function App() {
+  //Use array destructuring to define current state and functino to change state
+  const [taste, setFlavour] = useState("sweet");
   return (
     <>
-      <h1>Hello</h1>
+      <h1>Favourite flavour is {taste}</h1>
+      <button onClick={() => setFlavour("sour")}>
+        Grow up
+      </button>
+      <button onClick={() => setFlavour("salty")}>
+        Become a sailor
+      </button>
+      <button onClick={() => setFlavour("sweet")}>
+        Babify
+      </button>
     </>
   );
 }
