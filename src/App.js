@@ -12,7 +12,7 @@ function Main(props) {
     <section>
       <p>We sell {props.adjective} things. Very weird things.</p>
       <ul style={{ listStyleType: "none" }}>
-        {props.items.map((item) => <li>{item}</li>)}
+        {props.items.map((item) => <li key={item.id}>{item.title}</li>)}
       </ul>
     </section>
   );
@@ -31,12 +31,15 @@ const items = [
   "Pokemon cards"
 ];
 
+//Transform array of strings into array of objects with ids
+const itemObjects = items.map((item, i) => ({id: i, title: item}));
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Header name="Ben" />
-        <Main adjective="stanky" items={items}/>
+        <Main adjective="stanky" items={itemObjects}/>
         <Footer year={new Date().getFullYear()} />
       </header>
     </div>
