@@ -64,6 +64,6 @@ import App from "./App";
 
 //Render whatever is returned by the imported App function
 ReactDOM.render(
-  <App />, 
+  <App authorized={false} />, 
   document.getElementById("root")
 );

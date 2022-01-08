@@ -48,11 +48,19 @@ import "./App.css";
 //   );
 // }
 
-function App() {
+function SecretComponent() {
+  return <h1>SECRET INFO - AUTHORIZED EYES ONLY</h1>
+}
+
+function RegularComponent() {
+  return <h1>Info for regular plebs</h1>
+}
+
+function App(props) {
   return (
-    <div className="App">
-      Components go here
-    </div>
+    <>
+      {props.authorized ? <SecretComponent /> : <RegularComponent />}
+    </>
   );
 }
 
