@@ -61,6 +61,13 @@ import App from "./App";
 //   document.getElementById("root")
 // );
 
+//Array destructuring
+const [mostImportantItem, , thirdItem] = [
+  "Mask",
+  "Duct tape",
+  "Gloves"
+]
+console.log(thirdItem);
 
 //Render whatever is returned by the imported App function
 ReactDOM.render(
