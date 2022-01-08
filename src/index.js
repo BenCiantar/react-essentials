@@ -35,5 +35,35 @@ import App from "./App";
 //   document.getElementById("root")
 // );
 
-//Rener whatever is returned by the imported App function
-ReactDOM.render(<App />, document.getElementById("root"));
+//Create a second app to render alongside the first
+function AppTwo() {
+  return <h1>This is the second app</h1>;
+}
+
+//Two apps cannot be rendered together unless wrapped
+//Rather than wrapping in a div, can wrap in a fragment instead
+//Fragments are no inserted into the DOM, saving on clutter
+// ReactDOM.render(
+//   <React.Fragment>
+//     <App />, 
+//     <AppTwo />
+// </React.Fragment>,
+//   document.getElementById("root")
+// );
+
+
+//Shorthand way of creating a fragment
+ReactDOM.render(
+  <>
+    <App />, 
+    <AppTwo />
+</>,
+  document.getElementById("root")
+);
+
+
+//Render whatever is returned by the imported App function
+// ReactDOM.render(
+//   <App />, 
+//   document.getElementById("root")
+// );
