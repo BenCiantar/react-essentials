@@ -1,4 +1,5 @@
 import "./App.css";
+import spiderman from "../src/spiderman.png"
 
 function Header(props) {
   return (
@@ -11,6 +12,7 @@ function Main(props) {
   return (
     <section>
       <p>We sell {props.adjective} things. Very weird things.</p>
+      <img src={spiderman} alt="Spider-man Logo" height="150px" />
       <ul style={{ listStyleType: "none" }}>
         {props.items.map((item) => <li key={item.id}>{item.title}</li>)}
       </ul>
