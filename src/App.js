@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import "./App.css";
 // import spiderman from "../src/spiderman.png"
 
@@ -125,13 +125,45 @@ import "./App.css";
 //   );
 // }
 
-function App() {
+//Uses a toggle function to get the value of a checkbox
+// function App() {
+//   const [checked, setChecked] = useState(false);
+  
+//   //If checked false, return the opposite and vice versa
+//   function toggle() {
+//     setChecked((checked) => !checked);
+//   }
 
-    return (
-      <>
-        
-      </>
-    );
-  }
+//   return (
+//     <>
+//       <input 
+//         type="checkbox" 
+//         value={checked} 
+//         onChange={toggle}
+//       />
+//       <p>{checked ? "checked" : "not checked"}</p>
+//     </>
+//   );
+// }
+
+//useReducer can handle the toggle function instead
+//Takes two arguments - reducer to run and initial state
+function App() {
+  const [checked, toggle] = useReducer(
+    (checked) => !checked,
+    false
+  );
+  
+  return (
+    <>
+      <input 
+        type="checkbox" 
+        value={checked} 
+        onChange={toggle}
+      />
+      <p>{checked ? "checked" : "not checked"}</p>
+    </>
+  );
+}
 
 export default App;
