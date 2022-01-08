@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 // import spiderman from "../src/spiderman.png"
 
@@ -85,12 +85,26 @@ import "./App.css";
 //useState returns an array - firs item is the current state, 
 //second is a function that update state
 //Anon function bound to button updates state with defined function
+
+//useEffect sets a callback to run as a side effect
+//Second argument dependency array - leave empty to only trigger effect first time it renders
+//Adding a state will trigger the function whenever that state changes
 function App() {
   //Use array destructuring to define current state and functino to change state
-  const [taste, setFlavour] = useState("sweet");
+  const [flavour, setFlavour] = useState("sweet");
+  const [spiciness, setSpiciness] = useState("hawt");
+
+  useEffect(() => {
+    console.log(`I'm a ${flavour} boi!`)
+  }, [flavour]);
+
+  useEffect(() => {
+    console.log(`But I like it ${spiciness}!`)
+  }, [spiciness]);
+  
   return (
     <>
-      <h1>Favourite flavour is {taste}</h1>
+      <h1>Favourite flavour is {flavour} but I prefer it {spiciness}!</h1>
       <button onClick={() => setFlavour("sour")}>
         Grow up
       </button>
@@ -99,6 +113,13 @@ function App() {
       </button>
       <button onClick={() => setFlavour("sweet")}>
         Babify
+      </button>
+      <br />
+      <button onClick={() => setSpiciness("chilly")}>
+        Cool it down
+      </button>
+      <button onClick={() => setSpiciness("hawt")}>
+        Spice it up
       </button>
     </>
   );
