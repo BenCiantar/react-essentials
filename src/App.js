@@ -89,40 +89,49 @@ import "./App.css";
 //useEffect sets a callback to run as a side effect
 //Second argument dependency array - leave empty to only trigger effect first time it renders
 //Adding a state will trigger the function whenever that state changes
-function App() {
-  //Use array destructuring to define current state and functino to change state
-  const [flavour, setFlavour] = useState("sweet");
-  const [spiciness, setSpiciness] = useState("hawt");
+// function App() {
+//   //Use array destructuring to define current state and functino to change state
+//   const [flavour, setFlavour] = useState("sweet");
+//   const [spiciness, setSpiciness] = useState("hawt");
 
-  useEffect(() => {
-    console.log(`I'm a ${flavour} boi!`)
-  }, [flavour]);
+//   useEffect(() => {
+//     console.log(`I'm a ${flavour} boi!`)
+//   }, [flavour]);
 
-  useEffect(() => {
-    console.log(`But I like it ${spiciness}!`)
-  }, [spiciness]);
+//   useEffect(() => {
+//     console.log(`But I like it ${spiciness}!`)
+//   }, [spiciness]);
   
-  return (
-    <>
-      <h1>Favourite flavour is {flavour} but I prefer it {spiciness}!</h1>
-      <button onClick={() => setFlavour("sour")}>
-        Grow up
-      </button>
-      <button onClick={() => setFlavour("salty")}>
-        Become a sailor
-      </button>
-      <button onClick={() => setFlavour("sweet")}>
-        Babify
-      </button>
-      <br />
-      <button onClick={() => setSpiciness("chilly")}>
-        Cool it down
-      </button>
-      <button onClick={() => setSpiciness("hawt")}>
-        Spice it up
-      </button>
-    </>
-  );
-}
+//   return (
+//     <>
+//       <h1>Favourite flavour is {flavour} but I prefer it {spiciness}!</h1>
+//       <button onClick={() => setFlavour("sour")}>
+//         Grow up
+//       </button>
+//       <button onClick={() => setFlavour("salty")}>
+//         Become a sailor
+//       </button>
+//       <button onClick={() => setFlavour("sweet")}>
+//         Babify
+//       </button>
+//       <br />
+//       <button onClick={() => setSpiciness("chilly")}>
+//         Cool it down
+//       </button>
+//       <button onClick={() => setSpiciness("hawt")}>
+//         Spice it up
+//       </button>
+//     </>
+//   );
+// }
+
+function App() {
+
+    return (
+      <>
+        
+      </>
+    );
+  }
 
 export default App;
