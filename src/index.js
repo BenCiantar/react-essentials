@@ -70,7 +70,12 @@ import App from "./App";
 // console.log(thirdItem);
 
 //Render whatever is returned by the imported App function
+// ReactDOM.render(
+//   <App authorized={false} />, 
+//   document.getElementById("root")
+// );
+
 ReactDOM.render(
-  <App authorized={false} />, 
+  <App />, 
   document.getElementById("root")
 );

@@ -48,13 +48,13 @@ import "./App.css";
 //   );
 // }
 
-function SecretComponent() {
-  return <h1>SECRET INFO - AUTHORIZED EYES ONLY</h1>
-}
+// function SecretComponent() {
+//   return <h1>SECRET INFO - AUTHORIZED EYES ONLY</h1>
+// }
 
-function RegularComponent() {
-  return <h1>Info for regular plebs</h1>
-}
+// function RegularComponent() {
+//   return <h1>Info for regular plebs</h1>
+// }
 
 // function App(props) {
 //   return (
@@ -69,14 +69,22 @@ function RegularComponent() {
 // }
 
 //Using object destructuring to clear up syntax
-function App(authorized) {
+// function App(authorized) {
+//   return (
+//     <>
+//       {authorized ? 
+//         (<SecretComponent />
+//       ) : (
+//         <RegularComponent />
+//       )}
+//     </>
+//   );
+// }
+
+function App() {
   return (
     <>
-      {authorized ? 
-        (<SecretComponent />
-      ) : (
-        <RegularComponent />
-      )}
+      <h1>Hello</h1>
     </>
   );
 }
