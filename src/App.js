@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useReducer } from "react";
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import { Home, About, Events, Contact } from "./pages";
 // import spiderman from "../src/spiderman.png"
 
 // function Header(props) {
@@ -210,7 +212,12 @@ import "./App.css";
 function App() {
     return (
     <div>
-      <h1>Hello React Testing Library</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />}  />
+        <Route path="/events" element={<Events />}  />
+        <Route path="/contact" element={<Contact />}  />
+      </Routes>
     </div>
     );
 }

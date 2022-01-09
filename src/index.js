@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import { BrowserRouter as Router } from "react-router-dom";
 
 // ReactDOM.render(
 //   React.createElement(
@@ -75,7 +76,11 @@ import App from "./App";
 //   document.getElementById("root")
 // );
 
+//Wrapping app in router tag gives it access to features of router
 ReactDOM.render(
-  <App login="BenCiantar" />, 
+  <Router>
+    <App />
+  </Router>,
+ 
   document.getElementById("root")
 );
