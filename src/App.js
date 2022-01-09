@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useReducer } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { Home, About, Events, Contact } from "./pages";
+import { Home, About, Events, Contact, Whoops404 } from "./pages";
 // import spiderman from "../src/spiderman.png"
 
 // function Header(props) {
@@ -217,6 +217,7 @@ function App() {
         <Route path="/about" element={<About />}  />
         <Route path="/events" element={<Events />}  />
         <Route path="/contact" element={<Contact />}  />
+        <Route path="*" element={<Whoops404 />}  />
       </Routes>
     </div>
     );
