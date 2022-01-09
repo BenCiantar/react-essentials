@@ -76,6 +76,6 @@ import App from "./App";
 // );
 
 ReactDOM.render(
-  <App />, 
+  <App login="BenCiantar" />, 
   document.getElementById("root")
 );
